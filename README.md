@@ -1,10 +1,16 @@
 # CIS7000 USD Asset Directory & Interface
 
-This will be our new structure for OpenUSD asset storage. It is inspired by the design decisions made in NVIDIA's [da Vinci's Workshop](https://docs.omniverse.nvidia.com/usd/latest/usd_content_samples/davinci_workshop.html) and [Residential Lobby](https://docs.omniverse.nvidia.com/usd/latest/usd_content_samples/res_lobby.html) datasets, as well as Disney's [Moana](https://disneyanimation.com/resources/moana-island-scene/) dataset
+This will be our new structure for OpenUSD asset storage. It is inspired by the design decisions made in NVIDIA's [da Vinci's Workshop](https://docs.omniverse.nvidia.com/usd/latest/usd_content_samples/davinci_workshop.html) and [Residential Lobby](https://docs.omniverse.nvidia.com/usd/latest/usd_content_samples/res_lobby.html) datasets, as well as Disney's [Moana](https://disneyanimation.com/resources/moana-island-scene/) dataset.
 
 In this example folder, we have included several folders & features in general as placeholders for future usage. They have not been implemented yet. If such features are mentioned in this README, we will denote a ***TBI*** (i.e. to be implemented) indication next to them, meaning they can be disregarded for now.
 
+## What is important about this directory?
 The main design focus is on the `Assets` subdirectory and the new design for the USD interface of a singular asset.
+
+The directory contains an example asset (`campfire`) that has been restructured to fit the new guidelines.
+
+## How does it fit into our pipeline?
+The contents of this directory will be placed in an Amazon S3 bucket. i.e. `Assets`, `Assemblies`, `DCCs` will be "sub-buckets" under the top-level.
 
 ## Folder Structure Overview
 
