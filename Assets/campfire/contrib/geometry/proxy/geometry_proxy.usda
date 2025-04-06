@@ -1,0 +1,20 @@
+#usda 1.0
+(
+    defaultPrim = "geometry"
+    metersPerUnit = 0.01
+    upAxis = "Y"
+)
+
+def "geometry"
+{
+    uniform token purpose = "proxy"
+
+    def Cube "campfire_bbox"
+    {
+        float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+        double size = 1
+        float3 xformOp:scale = (284.5556, 99.8800, 278.3999)
+        double3 xformOp:translate = (-0.0222, 4.3870, 0.0074)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    }
+}

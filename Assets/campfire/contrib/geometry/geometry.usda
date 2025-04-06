@@ -1,0 +1,33 @@
+#usda 1.0
+(
+    doc = """Interface file for Geometry contribution"""
+    defaultPrim = "campfire"
+)
+
+def "campfire"
+{
+    def Scope "geometry" (
+        variants = {
+            string geometry = "lod"
+        }
+        prepend variantSets = "geometry"
+    )
+    {
+        variantSet "geometry" = {
+            "lod"
+            {
+                def "lod" (
+                    prepend payload = [@./lod/geometry_lod.usda@]
+                )
+                {
+
+                }
+            }
+            "proxy" (
+                prepend payload = [@./proxy/geometry_proxy.usda@]
+            )
+            {
+            }
+        }
+    }
+}

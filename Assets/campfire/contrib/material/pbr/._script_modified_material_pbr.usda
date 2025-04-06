@@ -1,0 +1,100 @@
+#usda 1.0
+(
+    defaultPrim = "campfire"
+    doc = """Generated from Composed Stage of root layer /Users/liu.amy05/Documents/cis-7000/hw10/Bucket/Assets/campfire/contrib/material/pbr/material_pbr.usda
+"""
+)
+
+def "campfire"
+{
+    def Xform "geometry"
+    {
+        over "lod"
+        {
+            over "campfire_LOD0"
+            {
+                over "rocks" (
+                    apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </campfire/material/rocksScope/material>
+                }
+
+                over "logs" (
+                    apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </campfire/material/logsScope/material>
+                }
+            }
+        }
+    }
+
+    def "material"
+    {
+        def Scope "rocksScope"
+        {
+            def Material "material"
+            {
+                token inputs:frame:stPrimvarName = "st"
+                token outputs:surface.connect = </campfire/material/rocksScope/shader.outputs:surface>
+            }
+
+            def Shader "shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor.connect = </campfire/material/rocksScope/diffuseTexture.outputs:rgb>
+                float inputs:roughness = 0.4
+                token outputs:surface
+            }
+
+            def Shader "stReader"
+            {
+                uniform token info:id = "UsdPrimvarReader_float2"
+                token inputs:varname.connect = </campfire/material/rocksScope/material.inputs:frame:stPrimvarName>
+                float2 outputs:result
+            }
+
+            def Shader "diffuseTexture"
+            {
+                uniform token info:id = "UsdUVTexture"
+                asset inputs:file = @./texture/rock.png@
+                float2 inputs:st.connect = </campfire/material/rocksScope/stReader.outputs:result>
+                float3 outputs:rgb
+            }
+        }
+
+        def Scope "logsScope"
+        {
+            def Material "material"
+            {
+                token inputs:frame:stPrimvarName = "st"
+                token outputs:surface.connect = </campfire/material/logsScope/shader.outputs:surface>
+            }
+
+            def Shader "shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor.connect = </campfire/material/logsScope/diffuseTexture.outputs:rgb>
+                float inputs:roughness = 0.4
+                token outputs:surface
+            }
+
+            def Shader "stReader"
+            {
+                uniform token info:id = "UsdPrimvarReader_float2"
+                token inputs:varname.connect = </campfire/material/logsScope/material.inputs:frame:stPrimvarName>
+                float2 outputs:result
+            }
+
+            def Shader "diffuseTexture"
+            {
+                uniform token info:id = "UsdUVTexture"
+                asset inputs:file = @./texture/wood.png@
+                float2 inputs:st.connect = </campfire/material/logsScope/stReader.outputs:result>
+                float3 outputs:rgb
+            }
+        }
+    }
+}
+

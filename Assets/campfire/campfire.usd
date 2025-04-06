@@ -1,0 +1,21 @@
+#usda 1.0
+(
+    doc = """Main entry point for an asset"""
+    metersPerUnit = 0.01
+    upAxis = "Y"
+)
+
+def "campfire" (
+    assetInfo = {
+        string name = "campfire"
+    }
+    kind = "component"
+    prepend references = [
+        @./contrib/tag/tag.usda@,
+        @./contrib/source/source.usda@,
+        @./contrib/material/material.usda@,
+        @./contrib/geometry/geometry.usda@,
+    ]
+)
+{
+}

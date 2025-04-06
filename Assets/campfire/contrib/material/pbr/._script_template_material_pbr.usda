@@ -1,0 +1,22 @@
+#usda 1.0
+(
+    defaultPrim = "campfire"
+    doc = """Template for running ._Scripts/._create_material.py on other assets"""
+)
+
+def "campfire"
+{
+    def Xform "geometry"
+    {
+        over "lod"
+        {
+            over "campfire_LOD0"
+            {
+            }
+        }
+    }
+
+    def "material"
+    {
+    }
+}

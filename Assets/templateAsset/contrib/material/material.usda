@@ -1,0 +1,22 @@
+#usda 1.0
+(
+    doc = """Interface file for Material contribution"""
+    defaultPrim = "templateAsset"
+)
+
+def "templateAsset"
+(
+    variants = {
+            string material = "diffuse"
+        }
+        prepend variantSets = "material"
+)
+{
+    variantSet "material" = {
+        "diffuse" (
+            prepend payload = [@./diffuse/material_diffuse.usda@]
+        )
+        {
+        }
+    }
+}

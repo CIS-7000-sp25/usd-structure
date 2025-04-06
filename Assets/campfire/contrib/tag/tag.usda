@@ -1,0 +1,13 @@
+#usda 1.0
+(
+    customLayerData = {
+        string[] mappingPairs2 = [
+            ["sourcePathA.usd", "targetPathA.usd", "sourcePathB.usd", "targetPathB.usd"]
+        ]
+    }
+    defaultPrim = "campfire"
+)
+
+def "campfire"
+{
+}

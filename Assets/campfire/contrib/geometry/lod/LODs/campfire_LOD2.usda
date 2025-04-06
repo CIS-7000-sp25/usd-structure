@@ -1,0 +1,16 @@
+#usda 1.0
+(
+    defaultPrim = "campfire_LOD0"
+    metersPerUnit = 0.01
+    upAxis = "Y"
+)
+
+def Xform "campfire_LOD2"
+{
+    def Cylinder "cylinder"
+    {
+        float3 xformOp:scale = (1, 1, 0.25)
+        uniform token[] xformOpOrder = ["xformOp:scale"]
+    }
+}
+

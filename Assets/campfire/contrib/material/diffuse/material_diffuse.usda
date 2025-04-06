@@ -1,0 +1,155 @@
+#usda 1.0
+(
+    defaultPrim = "campfire"
+)
+
+def "campfire"
+{
+    over "geometry"
+    {
+        over "lod" {
+            over "campfire_LOD0" {
+                def Mesh "rocks" {
+                    color3f[] primvars:displayColor = [(0.01, 0.01, 0.01)] (
+                        interpolation = "constant"
+                    )
+                }
+
+                def Mesh "logs" {
+                    color3f[] primvars:displayColor = [(0.5, 0.3, 0.15)] (
+                        interpolation = "constant"
+                    )
+                }
+            }
+
+            over "campfire_LOD1" {
+                def Sphere "sphere0"
+                {
+                    color3f[] primvars:displayColor = [(0.01, 0.01, 0.01)] (
+                        interpolation = "constant"
+                    )
+                }
+
+                def Sphere "sphere1"
+                {
+                    color3f[] primvars:displayColor = [(0.01, 0.01, 0.01)] (
+                        interpolation = "constant"
+                    )
+                }
+
+                def Sphere "sphere2"
+                {
+                    color3f[] primvars:displayColor = [(0.01, 0.01, 0.01)] (
+                        interpolation = "constant"
+                    )
+                }
+
+                def Sphere "sphere3"
+                {
+                    color3f[] primvars:displayColor = [(0.01, 0.01, 0.01)] (
+                        interpolation = "constant"
+                    )
+                }
+
+                def Sphere "sphere4"
+                {
+                    color3f[] primvars:displayColor = [(0.01, 0.01, 0.01)] (
+                        interpolation = "constant"
+                    )
+                }
+
+                def Sphere "sphere5"
+                {
+                    color3f[] primvars:displayColor = [(0.01, 0.01, 0.01)] (
+                        interpolation = "constant"
+                    )
+                }
+
+                def Sphere "sphere6"
+                {
+                    color3f[] primvars:displayColor = [(0.01, 0.01, 0.01)] (
+                        interpolation = "constant"
+                    )
+                }
+
+                def Sphere "sphere7"
+                {
+                    color3f[] primvars:displayColor = [(0.01, 0.01, 0.01)] (
+                        interpolation = "constant"
+                    )
+                }
+
+                def Sphere "sphere8"
+                {
+                    color3f[] primvars:displayColor = [(0.01, 0.01, 0.01)] (
+                        interpolation = "constant"
+                    )
+                }
+
+                def Sphere "sphere9"
+                {
+                    color3f[] primvars:displayColor = [(0.01, 0.01, 0.01)] (
+                        interpolation = "constant"
+                    )
+                }
+
+                def Sphere "sphere10"
+                {
+                    color3f[] primvars:displayColor = [(0.01, 0.01, 0.01)] (
+                        interpolation = "constant"
+                    )
+                }
+
+                def Cube "cube0"
+                {
+                    color3f[] primvars:displayColor = [(0.5, 0.3, 0.15)] (
+                        interpolation = "constant"
+                    )
+                }
+
+                def Cube "cube1"
+                {
+                    color3f[] primvars:displayColor = [(0.5, 0.3, 0.15)] (
+                        interpolation = "constant"
+                    )
+                }
+
+                def Cube "cube2"
+                {
+                    color3f[] primvars:displayColor = [(0.5, 0.3, 0.15)] (
+                        interpolation = "constant"
+                    )
+                }
+
+                def Cube "cube3"
+                {
+                    color3f[] primvars:displayColor = [(0.5, 0.3, 0.15)] (
+                        interpolation = "constant"
+                    )
+                }
+
+                def Cube "cube4"
+                {
+                    color3f[] primvars:displayColor = [(0.5, 0.3, 0.15)] (
+                        interpolation = "constant"
+                    )
+                }
+            }
+
+            over "campfire_LOD2" {
+                def Cylinder "cylinder"
+                {
+                    color3f[] primvars:displayColor = [(0.01, 0.01, 0.01)] (
+                        interpolation = "constant"
+                    )
+                }
+            }
+        }
+
+        over "campfire_bbox" {
+            color3f[] primvars:displayColor = [(0.01, 0.01, 0.01)] (
+                    interpolation = "constant"
+            )
+        }
+    }
+}

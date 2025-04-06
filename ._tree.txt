@@ -1,0 +1,53 @@
+.
+├── Assets
+│   ├── campfire
+│   │   ├── campfire.usd
+│   │   └── contrib
+│   │       ├── geometry
+│   │       │   ├── geometry.usda
+│   │       │   ├── lod
+│   │       │   │   ├── LODs
+│   │       │   │   │   ├── campfire_LOD0.usda
+│   │       │   │   │   ├── campfire_LOD1.usda
+│   │       │   │   │   └── campfire_LOD2.usda
+│   │       │   │   └── geometry_lod.usda
+│   │       │   └── proxy
+│   │       │       └── geometry_proxy.usda
+│   │       ├── material
+│   │       │   ├── diffuse
+│   │       │   │   └── material_diffuse.usda
+│   │       │   ├── material.usda
+│   │       │   └── pbr
+│   │       │       ├── material_pbr.usda
+│   │       │       └── texture
+│   │       │           ├── rock.png
+│   │       │           └── wood.png
+│   │       ├── source
+│   │       │   ├── geomMatInstances
+│   │       │   │   └── source_geomMatInstances.usda
+│   │       │   └── source.usda
+│   │       └── tag
+│   │           └── tag.usda
+│   └── templateAsset
+│       ├── contrib
+│       │   ├── geometry
+│       │   │   ├── geometry.usda
+│       │   │   └── lod
+│       │   │       └── geometry_lod.usda
+│       │   └── material
+│       │       ├── diffuse
+│       │       │   └── material_diffuse.usda
+│       │       └── material.usda
+│       └── templateAsset.usd
+├── Assemblies
+│   ├── component
+│   │   └── skatingMoomin
+│   │       ├── contrib
+│   │       └── skatingMoomin.usda
+│   ├── scene
+│   └── shot
+└── DCCs
+    ├── houdini
+    └── maya
+
+30 directories, 21 files

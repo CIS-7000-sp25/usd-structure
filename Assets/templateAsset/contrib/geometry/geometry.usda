@@ -1,0 +1,28 @@
+#usda 1.0
+(
+    doc = """Interface file for Geometry contribution. Note: The repetitive use of 'templateAsset' is because we are referencing in these files, which merges the contents of the referenced prim (the default prim if we don't specify) into the layer where we referenced it. So 'templateAsset' as it appears below is what is considered an empty prim, and will not appear in our flattened hierarchy"""
+    defaultPrim = "templateAsset"
+)
+
+def "templateAsset"
+{
+    def Scope "geometry" (
+        variants = {
+            string geometry = "lod"
+        }
+        prepend variantSets = "geometry"
+    )
+    {
+        variantSet "geometry" = {
+            "lod"
+            {
+                def "lod" (
+                    prepend payload = [@./lod/geometry_lod.usda@]
+                )
+                {
+
+                }
+            }
+        }
+    }
+}
