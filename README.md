@@ -10,7 +10,7 @@ The main design focus is on the `Assets` subdirectory and the new design for the
 The directory contains an example asset (`campfire`) that has been restructured to fit the new guidelines.
 
 ## How does it fit into our pipeline?
-The contents of this directory will be placed in an Amazon S3 bucket. i.e. `Assets`, `Assemblies`, `DCCs` will be "sub-buckets" under the top-level.
+The contents of this directory, along with all of our existing assets restructured and ported inside, will be placed in an Amazon S3 bucket. i.e. `Assets`, `Assemblies`, `DCCs` will be "sub-buckets" under the top-level.
 
 ## Folder Structure Overview
 
