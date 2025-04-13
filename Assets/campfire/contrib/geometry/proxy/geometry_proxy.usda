@@ -9,7 +9,9 @@ def "geometry"
 {
     uniform token purpose = "proxy"
 
-    def Cube "campfire_bbox"
+    def Cube "campfire_bbox" (
+        inherits = </campfire/Materials/MaterialClasses/class_Logs>
+    )
     {
         float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
         double size = 1

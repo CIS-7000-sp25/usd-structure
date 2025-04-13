@@ -7,9 +7,11 @@
 
 def Xform "campfire_LOD2"
 {
-    def Cylinder "cylinder"
+    def Cylinder "cylinder" (
+        inherits = </campfire/Materials/MaterialClasses/class_Logs>
+    )
     {
-        float3 xformOp:scale = (1, 1, 0.25)
+        float3 xformOp:scale = (100, 100, 25)
         uniform token[] xformOpOrder = ["xformOp:scale"]
     }
 }
