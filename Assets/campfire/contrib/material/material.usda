@@ -4,24 +4,13 @@
     defaultPrim = "campfire"
 )
 
-def "campfire"
-(
-    variants = {
-            string material = "pbr"
-        }
-        prepend variantSets = "material"
-)
-{
-    variantSet "material" = {
-        "diffuse" (
-            prepend payload = [@./diffuse/material_diffuse.usda@]
-        )
-        {
-        }
-        "pbr" (
-            prepend payload = [@./pbr/material_pbr.usda@]
-        )
-        {
+def "campfire" {
+    def Scope "Materials" (
+        prepend references = [@./rocks/material_rocks.usda@]
+    )
+    {
+        def "MaterialBindings" {
+            over "class_Rocks" { rel material:binding = </campfire/Materials/mat_Rocks> }
         }
     }
 }

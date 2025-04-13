@@ -1,0 +1,66 @@
+#usda 1.0
+(
+    defaultPrim = "campfire/Materials"
+)
+
+def "campfire" {
+    def "Materials" (
+        variants = {
+                string varset_Rocks = "pbr"
+            }
+        prepend variantSets = "varset_Rocks"
+    )
+    {
+        variantSet "varset_Rocks" = {
+            "pbr" {
+                def Material "mat_Rocks" {
+                    token outputs:surface.connect = </campfire/Materials/mat_Rocks/MaterialNetwork.outputs:surface>
+
+                    def NodeGraph "MaterialNetwork"
+                    {
+                        token outputs:surface.connect = </campfire/Materials/mat_Rocks/MaterialNetwork/UsdPreviewSurface.outputs:surface>
+
+                        def Shader "UsdPreviewSurface"
+                        {
+                            uniform token info:id = "UsdPreviewSurface"
+                            color3f inputs:diffuseColor.connect = </campfire/Materials/mat_Rocks/MaterialNetwork/DiffuseTexture.outputs:rgb>
+                            float inputs:roughness = 0.4
+                            token outputs:surface
+                        }
+
+                        def Shader "StReader"
+                        {
+                            uniform token info:id = "UsdPrimvarReader_float2"
+                            token inputs:varname = "st"
+                            float2 outputs:result
+                        }
+
+                        def Shader "DiffuseTexture"
+                        {
+                            uniform token info:id = "UsdUVTexture"
+                            asset inputs:file = @./texture/rock.png@
+                            float2 inputs:st.connect = </campfire/Materials/mat_Rocks/MaterialNetwork/StReader.outputs:result>
+                            float3 outputs:rgb
+                        }
+                    }
+                }
+            }
+            "diffuse" {
+                def Material "mat_Rocks" {
+                    token outputs:surface.connect = </campfire/Materials/mat_Rocks/UsdPreviewSurface.outputs:surface>
+
+                    def Shader "UsdPreviewSurface"
+                    {
+                        uniform token info:id = "UsdPreviewSurface"
+                        color3f[] inputs:diffuseColor = [(0.05, 0.05, 0.05)] (
+                            interpolation = "constant"
+                        )
+                        float inputs:ior = 1.327
+                        float inputs:roughness = 0.125
+                        token outputs:surface
+                    }
+                }
+            }
+        }
+    }
+}

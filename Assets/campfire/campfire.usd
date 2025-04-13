@@ -10,9 +10,8 @@ def "campfire" (
         string name = "campfire"
     }
     kind = "component"
-    prepend references = [
+    append references = [
         @./contrib/tag/tag.usda@,
-        @./contrib/source/source.usda@,
         @./contrib/material/material.usda@,
         @./contrib/geometry/geometry.usda@,
     ]

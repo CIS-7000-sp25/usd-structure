@@ -9,7 +9,9 @@ def Xform "campfire_LOD0" (
     kind = "component"
 )
 {
-    def Mesh "rocks"
+    def Mesh "rocks" (
+        inherits = </campfire/Materials/MaterialBindings/class_Rocks>
+    )
     {
         uniform bool doubleSided = 1
         float3[] extent = [(-142.30002, -45.553036, -139.19255), (142.25562, 48.10874, 139.20735)]

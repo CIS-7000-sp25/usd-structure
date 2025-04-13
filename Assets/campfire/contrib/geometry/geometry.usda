@@ -8,26 +8,40 @@ def "campfire"
 {
     def Scope "geometry" (
         variants = {
-            string geometry = "lod"
+            string geometry = "lod0"
         }
         prepend variantSets = "geometry"
     )
     {
         variantSet "geometry" = {
-            "lod"
+            "lod0" (
+                prepend payload = [@./lod0/geometry_lod0.usda@]
+            )
             {
-                def "lod" (
-                    prepend payload = [@./lod/geometry_lod.usda@]
-                )
-                {
-
-                }
+            }
+            "lod1" (
+                prepend payload = [@./lod1/geometry_lod1.usda@]
+            )
+            {
+            }
+            "lod2" (
+                prepend payload = [@./lod2/geometry_lod2.usda@]
+            )
+            {
             }
             "proxy" (
                 prepend payload = [@./proxy/geometry_proxy.usda@]
             )
             {
             }
+        }
+    }
+    def Scope "Materials"
+    {
+        def Scope "MaterialBindings" {
+            class "class_Rocks" (
+                apiSchemas = ["MaterialBindingAPI"]
+            ) {}
         }
     }
 }
