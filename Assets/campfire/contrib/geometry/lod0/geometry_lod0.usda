@@ -10,7 +10,7 @@ def Xform "campfire_LOD0" (
 )
 {
     def Mesh "rocks" (
-        inherits = </campfire/Materials/MaterialBindings/class_Rocks>
+        inherits = </campfire/Materials/MaterialClasses/class_Rocks>
     )
     {
         uniform bool doubleSided = 1

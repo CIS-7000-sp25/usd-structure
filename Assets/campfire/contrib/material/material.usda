@@ -9,8 +9,10 @@ def "campfire" {
         prepend references = [@./rocks/material_rocks.usda@]
     )
     {
-        def "MaterialBindings" {
-            over "class_Rocks" { rel material:binding = </campfire/Materials/mat_Rocks> }
+        def "MaterialClasses" {
+            over "class_Rocks" { 
+                rel material:binding = </campfire/Materials/mat_Rocks> 
+            }
         }
     }
 }
