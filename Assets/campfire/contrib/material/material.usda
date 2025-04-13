@@ -6,12 +6,15 @@
 
 def "campfire" {
     def Scope "Materials" (
-        prepend references = [@./rocks/material_rocks.usda@]
+        prepend references = [@./rocks/material_rocks.usda@, @./logs/material_logs.usda@]
     )
     {
         def "MaterialClasses" {
             over "class_Rocks" { 
                 rel material:binding = </campfire/Materials/mat_Rocks> 
+            }
+            over "class_Logs" { 
+                rel material:binding = </campfire/Materials/mat_Logs> 
             }
         }
     }

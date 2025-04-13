@@ -42,6 +42,10 @@ def "campfire"
             class "class_Rocks" (
                 apiSchemas = ["MaterialBindingAPI"]
             ) {}
+
+            class "class_Logs" (
+                apiSchemas = ["MaterialBindingAPI"]
+            ) {}
         }
     }
 }

@@ -73,7 +73,9 @@ def Xform "campfire_LOD0" (
         }
     }
 
-    def Mesh "logs"
+    def Mesh "logs" (
+        inherits = </campfire/Materials/MaterialClasses/class_Logs>
+    )
     {
         uniform bool doubleSided = 1
         float3[] extent = [(-33.3483, 0.26099572, -43.954014), (33.062313, 54.32701, 44.185825)]
