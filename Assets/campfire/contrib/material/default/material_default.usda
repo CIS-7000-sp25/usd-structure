@@ -7,20 +7,20 @@ def "campfire"
 {
     def "Materials" (
         variants = {
-            string varset_Rocks = "pbr"
+            string varset_Default = "pbr"
         }
-        prepend variantSets = "varset_Rocks"
+        prepend variantSets = "varset_Default"
     )
     {
-        variantSet "varset_Rocks" = {
+        variantSet "varset_Default" = {
             "diffuse" {
-                def Material "mat_Rocks"
+                def Material "mat_Default"
                 {
-                    token outputs:surface.connect = </campfire/Materials/mat_Rocks/matnet.outputs:surface>
+                    token outputs:surface.connect = </campfire/Materials/mat_Default/matnet.outputs:surface>
 
                     def NodeGraph "matnet"
                     {
-                        token outputs:surface.connect = </campfire/Materials/mat_Rocks/matnet/usdPreviewSurface.outputs:surface>
+                        token outputs:surface.connect = </campfire/Materials/mat_Default/matnet/usdPreviewSurface.outputs:surface>
 
                         def Shader "usdPreviewSurface"
                         {
@@ -35,18 +35,18 @@ def "campfire"
 
             }
             "pbr" {
-                def Material "mat_Rocks"
+                def Material "mat_Default"
                 {
-                    token outputs:surface.connect = </campfire/Materials/mat_Rocks/matnet.outputs:surface>
+                    token outputs:surface.connect = </campfire/Materials/mat_Default/matnet.outputs:surface>
 
                     def NodeGraph "matnet"
                     {
-                        token outputs:surface.connect = </campfire/Materials/mat_Rocks/matnet/usdPreviewSurface.outputs:surface>
+                        token outputs:surface.connect = </campfire/Materials/mat_Default/matnet/usdPreviewSurface.outputs:surface>
 
                         def Shader "usdPreviewSurface"
                         {
                             uniform token info:id = "UsdPreviewSurface"
-                            color3f inputs:diffuseColor.connect = </campfire/Materials/mat_Rocks/matnet/diffuseTexture.outputs:rgb>
+                            color3f inputs:diffuseColor.connect = </campfire/Materials/mat_Default/matnet/diffuseTexture.outputs:rgb>
                             float inputs:roughness = 0.8
                             token outputs:surface
                         }
@@ -61,12 +61,13 @@ def "campfire"
                         def Shader "diffuseTexture"
                         {
                             uniform token info:id = "UsdUVTexture"
-                            asset inputs:file = @./texture/rock.png@
-                            float2 inputs:st.connect = </campfire/Materials/mat_Rocks/matnet/stReader.outputs:result>
+                            asset inputs:file = @./texture/default.png@
+                            float2 inputs:st.connect = </campfire/Materials/mat_Default/matnet/stReader.outputs:result>
                             float3 outputs:rgb
                         }
                     }
                 }
+
             }
         }
     }
