@@ -1,5 +1,10 @@
 # CIS7000 USD Asset Directory & Interface
 
+![layer](._Images/Flattened_Asset_Layer.png)
+
+### [Structure Walkthrough Video](https://youtu.be/hNuHniOKjt4)
+### [User Workflows Breakdown Google Slides](https://docs.google.com/presentation/d/1woaqhcbrqUG4xBeFAcAmoyY0dvrEebgtueczLWuDks8/edit?usp=sharing)
+
 This will be our new structure for OpenUSD asset storage. It is inspired by the design decisions made in NVIDIA's [da Vinci's Workshop](https://docs.omniverse.nvidia.com/usd/latest/usd_content_samples/davinci_workshop.html) and [Residential Lobby](https://docs.omniverse.nvidia.com/usd/latest/usd_content_samples/res_lobby.html) datasets, as well as Disney's [Moana](https://disneyanimation.com/resources/moana-island-scene/) dataset.
 
 In this example folder, we have included several folders & features in general as placeholders for future usage. They have not been implemented yet. If such features are mentioned in this README, we will denote a ***TBI*** (i.e. to be implemented) indication next to them, meaning they can be disregarded for now.
