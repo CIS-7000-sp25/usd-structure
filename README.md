@@ -46,7 +46,7 @@ Besides the above requirements (actually, the 3rd one isn't even neccesary), dat
 
 ## File Types and Naming Conventions
 
-- `.usd`: Neutral format for root/base files.
+- `.usd`: Neutral format for root/base files. ***TBI***
 - `.usda`: ASCII, editable. Used for interface layers and user contributions.
 - `.usdc`: Binary, non-editable. Used for large datasets and performance. ***TBI***
 
@@ -61,18 +61,11 @@ Assets can support:
   
 ## Placement of external assets
 
-As an example we've placed texture files under `Assets/campfire/contrib/material/pbr/texture/`). Other needs for external assets as they arise should also be placed within individual asset subfolders, rather than shared database wide. Although that would result in less data usage, this ensures assets are modular and self-contained.
+As an example we've placed texture files under `Assets/campfire/contrib/material/<type>/texture/`). Other needs for external assets as they arise should also be placed within individual asset subfolders, rather than shared database wide. Although that would result in less data usage, this ensures assets are modular and self-contained.
 
 ## Scripting examples
 
-I wrote a Python script to make the "pbr" variant file at `Assets/campfire/contrib/material/pbr/material_pbr.usda` work for the `campfire` asset. We included it to demonstrate how this asset structure also can be easily integrated with scripts / procedural workflows (shoutout DCC team!). From the root directory, you can run:
-
-```bash
-cd ._Scripts
-vim ._create_material.py # i.e. open in your desired text editor
-# look through code logic and change default paths, etc.
-python ._create_material.py
-```
+I wrote a Python script to build our USD scenes from scratch and copy over our previous USD asset data. It is included to demonstrate how this asset structure also can be easily integrated with scripts / procedural workflows (shoutout DCC team!). Please use it for reference.
 
 ## Design Highlights
 

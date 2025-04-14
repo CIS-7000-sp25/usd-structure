@@ -1,44 +1,4 @@
 .
-├── Assets
-│   ├── campfire
-│   │   ├── campfire.usd
-│   │   └── contrib
-│   │       ├── geometry
-│   │       │   ├── geometry.usda
-│   │       │   ├── lod
-│   │       │   │   ├── LODs
-│   │       │   │   │   ├── campfire_LOD0.usda
-│   │       │   │   │   ├── campfire_LOD1.usda
-│   │       │   │   │   └── campfire_LOD2.usda
-│   │       │   │   └── geometry_lod.usda
-│   │       │   └── proxy
-│   │       │       └── geometry_proxy.usda
-│   │       ├── material
-│   │       │   ├── diffuse
-│   │       │   │   └── material_diffuse.usda
-│   │       │   ├── material.usda
-│   │       │   └── pbr
-│   │       │       ├── material_pbr.usda
-│   │       │       └── texture
-│   │       │           ├── rock.png
-│   │       │           └── wood.png
-│   │       ├── source
-│   │       │   ├── geomMatInstances
-│   │       │   │   └── source_geomMatInstances.usda
-│   │       │   └── source.usda
-│   │       └── tag
-│   │           └── tag.usda
-│   └── templateAsset
-│       ├── contrib
-│       │   ├── geometry
-│       │   │   ├── geometry.usda
-│       │   │   └── lod
-│       │   │       └── geometry_lod.usda
-│       │   └── material
-│       │       ├── diffuse
-│       │       │   └── material_diffuse.usda
-│       │       └── material.usda
-│       └── templateAsset.usd
 ├── Assemblies
 │   ├── component
 │   │   └── skatingMoomin
@@ -46,8 +6,57 @@
 │   │       └── skatingMoomin.usda
 │   ├── scene
 │   └── shot
+├── Assets
+│   ├── campfire
+│   │   ├── campfire.usda
+│   │   └── contrib
+│   │       ├── geometry
+│   │       │   ├── bbox
+│   │       │   │   └── geometry_bbox.usda
+│   │       │   ├── geometry.usda
+│   │       │   ├── LOD0
+│   │       │   │   └── geometry_LOD0.usda
+│   │       │   ├── LOD1
+│   │       │   │   └── geometry_LOD1.usda
+│   │       │   └── LOD2
+│   │       │       └── geometry_LOD2.usda
+│   │       ├── material
+│   │       │   ├── default
+│   │       │   │   ├── material_default.usda
+│   │       │   │   └── texture
+│   │       │   │       └── default.png
+│   │       │   ├── logs
+│   │       │   │   ├── material_logs.usda
+│   │       │   │   └── texture
+│   │       │   │       └── log.png
+│   │       │   ├── material.usda
+│   │       │   └── rocks
+│   │       │       ├── material_rocks.usda
+│   │       │       └── texture
+│   │       │           └── rock.png
+│   │       └── tag
+│   │           └── tag.usda
+│   └── yugiohClockArc
+│       ├── contrib
+│       │   ├── geometry
+│       │   │   ├── bbox
+│       │   │   │   └── geometry_bbox.usda
+│       │   │   ├── geometry.usda
+│       │   │   ├── LOD0
+│       │   │   │   └── geometry_LOD0.usda
+│       │   │   ├── LOD1
+│       │   │   │   └── geometry_LOD1.usda
+│       │   │   └── LOD2
+│       │   │       └── geometry_LOD2.usda
+│       │   └── material
+│       │       ├── default
+│       │       │   ├── material_default.usda
+│       │       │   └── texture
+│       │       │       └── default.png
+│       │       └── material.usda
+│       └── yugiohClockArc.usda
 └── DCCs
-    ├── houdini
+    ├── houdini
     └── maya
 
-30 directories, 21 files
+36 directories, 24 files

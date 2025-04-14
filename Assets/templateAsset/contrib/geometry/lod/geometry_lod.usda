@@ -1,9 +1,0 @@
-#usda 1.0
-(
-    doc = """Essentially copy and paste of original `assetName.usda` file. Since this file is referenced in within geometry.usda, even 'defaultPrim' can remain what it was before, which was our assetName."""
-    defaultPrim = "assetName"
-)
-
-def "assetName"
-{
-}
