@@ -21,21 +21,19 @@
 │   │       │   └── LOD2
 │   │       │       └── geometry_LOD2.usda
 │   │       ├── material
-│   │       │   ├── default
-│   │       │   │   ├── material_default.usda
-│   │       │   │   └── texture
-│   │       │   │       └── default.png
-│   │       │   ├── logs
-│   │       │   │   ├── material_logs.usda
-│   │       │   │   └── texture
-│   │       │   │       └── log.png
-│   │       │   ├── material.usda
-│   │       │   └── rocks
-│   │       │       ├── material_rocks.usda
-│   │       │       └── texture
-│   │       │           └── rock.png
-│   │       └── tag
-│   │           └── tag.usda
+│   │           ├── default
+│   │           │   ├── material_default.usda
+│   │           │   └── texture
+│   │           │       └── default.png
+│   │           ├── logs
+│   │           │   ├── material_logs.usda
+│   │           │   └── texture
+│   │           │       └── log.png
+│   │           ├── material.usda
+│   │           └── rocks
+│   │               ├── material_rocks.usda
+│   │               └── texture
+│   │                   └── rock.png
 │   └── yugiohClockArc
 │       ├── contrib
 │       │   ├── geometry
@@ -59,4 +57,4 @@
     ├── houdini
     └── maya
 
-36 directories, 24 files
+35 directories, 23 files
