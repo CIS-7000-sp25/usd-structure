@@ -1,4 +1,4 @@
-# CIS7000 USD Asset Directory & Interface
+# University of Pennsylvania Production Pipelines USD Asset Directory & Interface
 
 ![layer](._Images/Flattened_Asset_Layer.png)
 
