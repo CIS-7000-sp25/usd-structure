@@ -4,6 +4,7 @@
 
 ### [Structure Walkthrough Video](https://youtu.be/hNuHniOKjt4)
 ### [User Workflows Breakdown Presentation PDF](https://drive.google.com/file/d/1ZxiKbZk2xu4kw1len1eW1ywzZlvCVUjK/view?usp=sharing)
+### [Project Breakdown](https://amyliu.dev/projects/PAPAYA/)
 
 This will be our new structure for OpenUSD asset storage. It is inspired by the design decisions made in NVIDIA's [da Vinci's Workshop](https://docs.omniverse.nvidia.com/usd/latest/usd_content_samples/davinci_workshop.html) and [Residential Lobby](https://docs.omniverse.nvidia.com/usd/latest/usd_content_samples/res_lobby.html) datasets, as well as Disney's [Moana](https://disneyanimation.com/resources/moana-island-scene/) dataset.
 
